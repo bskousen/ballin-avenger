@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Brendan Skousen Accordion</title>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+<script type="text/javascript">
+// Make sure you add the jQuery Library and jQuery UI
+$(function() {
+    $("#accordion").accordion({
+        // You can change this to auto or fill for more info view http://api.jqueryui.com/accordion/#option-heightStyle
+        heightStyle: "content",
+        // Set this to true if you want the active accordion to remain open
+        collapsible: true,
+        // Setting active to false will collapse all panels. This requires the collapsible option to be true.
+        active: false,
+        autoHeight: true
+    });
+    //initialize accordion            
+    $("#accordion").accordion();
+    //set accordion header options
+    $("#accordion").accordion("option", "icons", {
+        // You can change this to differnt Font Awesome class  
+        'header': 'icon-expand',
+        // You can change this to differnt Font Awesome class
+        'activeHeader': 'icon-collapse'
+    });
+});
+</script>
+<style type="text/css">
+@import  url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+@import  url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+
+
+/* Main accordion css */
+#accordion {
+    max-width: 700px; /* You can change this */
+    margin: auto; /* You can remove this if you do not need it to align in the center of your element */
+    display: block; 
+}
+
+/* This controls the text inside the div, you can play with this by adding background-color, border, etc. */
+#accordion div {
+    padding: 5px 10px;
+    width: 95%;
+    display: inline-block;
+}
+
+/* This controls the header */
+#accordion h3 {
+    display: block;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    padding: 8px 11px;
+    font-family: Oswald, sans-serif;
+    letter-spacing: 1px;
+    font-weight: 700;
+    width: 95%;
+    margin: 5px;
+}
+
+#accordion div p {
+  margin-top: 0;
+}
+
+/* This CSS controls the Font Awesome Icon, You can float: left as well and add margin-right: 5px; */
+.icon-expand,.icon-collapse {
+    float: right;
+    margin-top: 5px;
+}
+
+/* USE THE BELOW CSS FOR BLUE */
+.blue h3 {
+    background: #377ad0; /* You can change this to whatever background color you want for the header */
+    color: #fff; /* You can change this to whatever font color you want for the header */
+}</style>
+</head>
+
+<body>
+<div class="blue" id="accordion">
+    <h3>Enter Title 1</h3>
+
+    <div>
+        <img src="http://placehold.it/150x150" style=
+        "margin-right: 10px; float: left;">
+
+        <p>Bacon ipsum dolor sit amet jerky capicola shank ball tip venison.
+        Prosciutto kielbasa chicken, pork loin shoulder fatback frankfurter
+        tenderloin short loin andouille capicola filet mignon. Turducken boudin
+        prosciutto pork, ball tip tri-tip pork belly pork loin. Frankfurter
+        kielbasa ball tip short ribs pork belly, ham hock chicken meatball
+        brisket beef flank jerky. Cow hamburger meatloaf doner short ribs
+        turducken ham tenderloin ground round flank jerky jowl corned beef
+        spare ribs. T-bone salami kielbasa boudin biltong short loin hamburger
+        beef pancetta sirloin tenderloin shank ball tip.</p>
+    </div>
+
+    <h3>Enter Title 2</h3>
+
+    <div>
+        <p>Bacon ipsum dolor sit amet jerky capicola shank ball tip venison.
+        Prosciutto kielbasa chicken, pork loin shoulder fatback frankfurter
+        tenderloin short loin andouille capicola filet mignon. Turducken boudin
+        prosciutto pork, ball tip tri-tip pork belly pork loin. Frankfurter
+        kielbasa ball tip short ribs pork belly, ham hock chicken meatball
+        brisket beef flank jerky. Cow hamburger meatloaf doner short ribs
+        turducken ham tenderloin ground round flank jerky jowl corned beef
+        spare ribs. T-bone salami kielbasa boudin biltong short loin hamburger
+        beef pancetta sirloin tenderloin shank ball tip.</p>
+
+        <ul>
+            <li>List Item 1</li>
+
+            <li>List Item 2</li>
+
+            <li>List Item 3</li>
+
+            <li>List Item 4</li>
+        </ul>
+    </div>
+
+    <h3>Enter Title 3</h3>
+
+    <div>
+        <p>Bacon ipsum dolor sit amet jerky capicola shank ball tip venison.
+        Prosciutto kielbasa chicken, pork loin shoulder fatback frankfurter
+        tenderloin short loin andouille capicola filet mignon. Turducken boudin
+        prosciutto pork, ball tip tri-tip pork belly pork loin. Frankfurter
+        kielbasa ball tip short ribs pork belly, ham hock chicken meatball
+        brisket beef flank jerky. Cow hamburger meatloaf doner short ribs
+        turducken ham tenderloin ground round flank jerky jowl corned beef
+        spare ribs. T-bone salami kielbasa boudin biltong short loin hamburger
+        beef pancetta sirloin tenderloin shank ball tip.</p>
+    </div>
+</div>
+</body>
+</html>
